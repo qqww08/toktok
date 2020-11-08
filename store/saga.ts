@@ -4,8 +4,7 @@ import { actionTypes, getActionSuccess, getActionFail } from './action';
 import { SagaIterator } from 'redux-saga';
 function* getActionSaga(action): SagaIterator {
   try {
-    const res = '123';
-    yield put(getActionSuccess(res));
+    yield put(getActionSuccess(res.data.data));
   } catch (err) {
     yield put(getActionFail(err));
   }

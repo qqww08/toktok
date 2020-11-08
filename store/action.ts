@@ -8,7 +8,7 @@ export type Action = actionIs.GetAction | actionIs.GetActionSuccess | actionIs.G
 export function getAction(): actionIs.GetAction {
   return { type: actionTypes.GET_ACTION };
 }
-export function getActionSuccess(data): actionIs.GetActionSuccess {
+export function getActionSuccess(data: any): actionIs.GetActionSuccess {
   return {
     type: actionTypes.GET_ACTION_SUCCESS,
     data,

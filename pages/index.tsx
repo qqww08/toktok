@@ -1,10 +1,15 @@
 import { NextPage } from 'next';
 import React from 'react';
-import { wrapper } from '../createStore';
+import { State, wrapper } from '../createStore';
 import { getAction } from '../store/action';
 import styled from '../styles/common/themed-components';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import { ActionInterfaces } from '../store/reducer';
 
-const Index: NextPage = () => {
+export const getStaticProps = wrapper.getStaticProps(async ({ store }) => {
+  store.dispatch(getAction());
+});
+const Index: NextPage<State> = () => {
   // const dispatch = useDispatch();
   // dispatch(getAction());
   const Input = styled.div`
@@ -16,7 +21,5 @@ const Index: NextPage = () => {
     </div>
   );
 };
-wrapper.getServerSideProps(async (ctx) => {
-  ctx.store.dispatch(getAction());
-});
-export default Index;
+
+export default connect((state: State) => state)(Index);

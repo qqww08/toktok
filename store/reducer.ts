@@ -1,12 +1,11 @@
 import { actionTypes, Action } from './action';
-import { ActionInterface } from './interface';
 export interface ActionInterfaces {
-  data: ActionInterface;
+  data: any;
   isLoading: boolean;
   isLoaded: boolean;
   error: string;
 }
-export const initialState: any = {
+export const initialState = {
   data: null,
   isLoading: false,
   isLoaded: false,
