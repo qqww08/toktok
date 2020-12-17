@@ -1,6 +1,7 @@
-import { Store } from 'redux';
-import { Task } from 'redux-saga';
-import { ActionInterfaces } from '../store/reducer';
+import { Store } from "redux";
+import { Task } from "redux-saga";
+import { ActionInterfaces } from "~/store/reducer";
+
 export interface WithSagaTaskStore extends Store {
   sagaTask?: Task;
 }

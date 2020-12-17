@@ -1,12 +1,9 @@
-import React, { FC } from 'react';
-import { AppProps } from 'next/app';
-import withReduxSaga from 'next-redux-saga';
-import { wrapper } from '../createStore';
-import { WithSagaTaskStore } from '../interfaces';
-import GlobalStyles from '../styles/common/global-styles';
-import { ThemeProvider } from '../styles/common/themed-components';
-import theme from '../styles/common/themes';
-import { NextPage } from 'next';
+import React, { FC } from "react";
+import { AppProps } from "next/app";
+import { wrapper } from "~/createStore";
+import GlobalStyles from "~/styles/global-styles";
+import { ThemeProvider } from "~/styles/themed-components";
+import theme from "~/styles/themes";
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }: any) => (
   <>

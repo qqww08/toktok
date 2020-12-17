@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "lib": [
+      "es6",
       "dom",
       "dom.iterable",
       "esnext"
@@ -14,9 +15,18 @@
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "rootDir": "src",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": "./",
+    "paths": {
+      "~/*": ["*"],
+      "styles": ["styles/*"],
+      "interface": ["interface/*"],
+      "pages": ["pages/*"],
+      "utils": ["utils/*"]
+    }
   },
   "exclude": [
     "node_modules"
@@ -24,6 +34,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "src"
   ]
 }

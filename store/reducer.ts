@@ -1,10 +1,12 @@
-import { actionTypes, Action } from './action';
+import { Action, actionTypes } from "./action";
+
 export interface ActionInterfaces {
   data: any;
   isLoading: boolean;
   isLoaded: boolean;
   error: string;
 }
+
 export const initialState = {
   data: null,
   isLoading: false,
@@ -27,7 +29,7 @@ const getAction = (state = initialState, action: Action): ActionInterfaces => {
     case actionTypes.GET_ACTION_FAIL:
       return {
         ...state,
-        error: 'test',
+        error: "test",
         isLoading: false,
       };
     default:
