@@ -1,4 +1,9 @@
 import { combineReducers } from "redux";
-export const initialState = {};
+import getGlobal, { initialState as global } from "~/store/global/reducers";
+export const initialState = {
+  getGlobal: global,
+};
 
-export default combineReducers({});
+export default combineReducers({
+  getGlobal,
+});

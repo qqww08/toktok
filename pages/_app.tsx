@@ -29,17 +29,15 @@ class MyApp extends App<MyAppProps, {}> {
     const { props } = this;
     const { Component, pageProps, store } = props;
 
-    // const viewFlag = loading && props.stores.getState().getMe.userData !== null;
+    // const viewFlag = loading && props.store.getState().getMe.userData !== null;
 
     return (
-      <React.Fragment>
-        <Provider store={store}>
-          <GlobalStyles />
-          <ThemeProvider theme={theme}>
-            <Component {...pageProps} />
-          </ThemeProvider>
-        </Provider>
-      </React.Fragment>
+      <Provider store={store}>
+        <GlobalStyles />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </Provider>
     );
   }
 }

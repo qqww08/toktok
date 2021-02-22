@@ -1,13 +1,22 @@
-import reset from 'styled-reset';
-import { createGlobalStyle, css } from 'styled-components';
+import reset from "styled-reset";
+import { createGlobalStyle, css } from "styled-components";
+import NotoMedium from "../public/fonts/NotoSansCJKkr-Medium.otf";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
+  @font-face {
+    font-family: 'NotoMedium';
+    src: url('${NotoMedium}') format('otf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
   * {
     box-sizing: border-box;
+    font-family: "NotoMedium";
   }
-  body{
-    font-family: "Noto Sans CJK KR", sans-serif;
+  html,body{
+    font-family: "NotoMedium";
   }
   a {
     color: inherit;
@@ -18,30 +27,21 @@ const GlobalStyle = createGlobalStyle`
     border: none;
     outline: none;
   }
-  h1, h2, h3, h4, h5, h6{
-    font-family:'Maven Pro', sans-serif;
-  }
-  /* 웹앱으로 안에 들어갈시 필수로 넣어야함 */
-  select,input {
-    border-style:none;
-    background-color:transparent;
-    border-radius: 0;
-    appearance:none;
-    -moz-appearance:none;
-   -webkit-appearance:none;
-  }
-  /*********************************/
+  
   @media only screen and (max-width: 768px) {
-    body {
+    html {
       font-size: 12px;
     }
   }
 
-  @media only screen and (max-width: 576px) {
-    body {
+  @media only screen and (max-width: 400px) {
+    html {
       font-size: 10px;
     }
   }
+`;
+export const Medium = css`
+  font-family: "My custom family", sans-serif;
 `;
 // Background center
 export const BgCover = css`
@@ -108,8 +108,8 @@ export const Threeline = css`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 `;
-export const px2rem = px => {
+export const px2rem = (px) => {
   const rem = 72;
-  return px / rem + 'rem';
+  return px / rem + "rem";
 };
 export default GlobalStyle;

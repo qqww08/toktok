@@ -35,7 +35,7 @@ module.exports = withBundleAnalyzer(
       );
       // webpack setting
       config.module.rules.push({
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|ico)$/,
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|ico|otf)$/,
         use: {
           loader: "url-loader",
           options: {
