@@ -10,11 +10,16 @@ interface Props {
   on: boolean;
   onClick?: () => void;
 }
+/**
+ * Custom Button
+ * @param text = 문구
+ * @param width = width 크기
+ * */
 const Button = ({ text, width, on, onClick }: Props) => {
   return (
     <__ButtonWrapper
       width={width}
-      on={on}
+      on={on.toString()}
       onClick={() => onClick()}
       type="button"
     >
@@ -22,7 +27,7 @@ const Button = ({ text, width, on, onClick }: Props) => {
     </__ButtonWrapper>
   );
 };
-const __ButtonWrapper = styled.button<{ width: string; on: boolean }>`
+const __ButtonWrapper = styled.button<{ width: string; on: string }>`
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 2.2rem;
@@ -30,9 +35,9 @@ const __ButtonWrapper = styled.button<{ width: string; on: boolean }>`
   height: 4.7rem;
   border: 0.1rem solid ${themes.color.darkSkyBlue};
   color: ${(props) =>
-    props.on ? themes.color.white : themes.color.darkSkyBlue};
+    props.on === "true" ? themes.color.white : themes.color.darkSkyBlue};
   background: ${(props) =>
-    props.on ? themes.color.darkSkyBlue : themes.color.white};
+    props.on === "true" ? themes.color.darkSkyBlue : themes.color.white};
   border-radius: 8px;
 `;
 export default Button;

@@ -1,20 +1,9 @@
-#NextJS Boilerplate
 
-Features
-- nextjs 10,
-- typescript,
-- redux,
-- redux-saga,
-- styled-components,
-- axios,
-- prettierrc
-- eslint,
-- js-cookie,
-- webpack
-- webpack Compression 
+``` bash
+# install dependencies
+ npm install
 
-Feature/scss
-- scss
+# start localhost:3000
+ npm run dev
+``` 
 
-Feature/i18n
-- i18n
