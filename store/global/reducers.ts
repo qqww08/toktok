@@ -2,6 +2,7 @@ import { Action, actionTypes } from "./actions";
 
 export interface GlobalInterfaces {
   carData: any;
+  update: null | number;
 }
 
 export const initialState: any = {
@@ -11,17 +12,23 @@ export const initialState: any = {
       repair: "",
       made: "",
       price: "",
+      photo: null,
     },
   ],
+  update: null,
 };
 
 const getGlobal = (state = initialState, action: Action): GlobalInterfaces => {
-  console.log(state);
   switch (action.type) {
     case actionTypes.GET_CAR:
       return {
         ...state,
         carData: action.carData,
+      };
+    case actionTypes.FORCE_UPDATE:
+      return {
+        ...state,
+        update: action.update,
       };
 
     default:

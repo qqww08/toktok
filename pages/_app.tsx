@@ -8,7 +8,8 @@ import { WithSagaTaskStore } from "../interfaces";
 import GlobalStyles from "../styles/global-styles";
 import { ThemeProvider } from "../styles/themed-components";
 import theme from "../styles/themes";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 interface MyAppProps {
   store: WithSagaTaskStore;
 }

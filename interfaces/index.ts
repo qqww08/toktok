@@ -15,3 +15,7 @@ export interface WithReduxNextPageContext extends NextPageContext {
 export interface State {
   getGlobal: GlobalInterfaces;
 }
+export interface ValueProps<T> {
+  valueProps: (value: T) => void;
+  forceUpdate: boolean;
+}

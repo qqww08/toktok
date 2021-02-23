@@ -7,6 +7,12 @@ interface Props<T> {
   feature?: T;
   children: ReactNode;
 }
+/**
+ * 카테고리
+ * @param name = main category ex)사고이력, 수리내역
+ * @param feature = sub category
+ * @param children = child
+ * */
 function Category<T>({ name, feature, children }: Props<T>) {
   return (
     <>

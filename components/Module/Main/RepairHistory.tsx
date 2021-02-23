@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import themes from "~/styles/themes";
-
-const RepairHistory = ({ valueProps }) => {
+import useFormForceReset from "~/hooks/useFormForceReset";
+import { ValueProps } from "~/interfaces";
+/**
+ * 수리내역
+ * @param valueProps = data props
+ * @param forceUpdate = update
+ * */
+const RepairHistory = ({ valueProps, forceUpdate }: ValueProps<string>) => {
   const [value, setValue] = useState<string>("");
+  useFormForceReset<string>(setValue, forceUpdate, "");
   useEffect(() => {
     valueProps(value);
   }, [value]);
+
   return (
     <__TextArea
       placeholder="구체적인 수리 내역을 작성해 주세요."

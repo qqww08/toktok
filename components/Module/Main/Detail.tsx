@@ -6,15 +6,11 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import styled from "styled-components";
 import themes from "~/styles/themes";
 import FormWrapper from "~/components/Template/Main/FormWrapper";
-import { useDispatch, useSelector } from "react-redux";
-import { getCarData } from "~/store/global/actions";
-import { State } from "~/interfaces";
+
 interface Props {
   idx: number;
 }
 const Detail = ({ idx }: Props) => {
-  const dispatch = useDispatch();
-
   return (
     <__DetailWrapper>
       <Accordion id="accordion-header">

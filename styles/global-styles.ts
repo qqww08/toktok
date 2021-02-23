@@ -1,6 +1,7 @@
 import reset from "styled-reset";
 import { createGlobalStyle, css } from "styled-components";
 import NotoMedium from "../public/fonts/NotoSansCJKkr-Medium.otf";
+import themes from "~/styles/themes";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -58,6 +59,23 @@ export const Popup = css`
   width: 100%;
   height: 100%;
 `;
+export const __Snackbar = css`
+  .snackbar {
+    bottom: 7.8rem;
+    .MuiSnackbarContent-root {
+      background: ${themes.color.black};
+      padding: 0;
+      border-radius: 10px;
+    }
+    .MuiSnackbarContent-message {
+      color: ${themes.color.white};
+      padding: 1.6rem 4.4rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+      letter-spacing: -0.53px;
+    }
+  }
+`;
 // flex
 export const FlexCenter = css`
   display: flex;
@@ -108,8 +126,5 @@ export const Threeline = css`
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 `;
-export const px2rem = (px) => {
-  const rem = 72;
-  return px / rem + "rem";
-};
+
 export default GlobalStyle;

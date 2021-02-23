@@ -4,7 +4,7 @@ import themes from "~/styles/themes";
 interface Props {
   children: ReactNode;
 }
-const Header = ({ children }) => {
+const Header = ({ children }: Props) => {
   return (
     <__HeaderWrapper>
       <__Title>똑똑한 중고차</__Title>
@@ -13,7 +13,7 @@ const Header = ({ children }) => {
   );
 };
 const __HeaderWrapper = styled.div`
-  padding: 0.6rem 1.6rem 4.2rem;
+  padding: 0.6rem 1.6rem 7rem;
 `;
 const __Title = styled.h1`
   font-size: 2rem;
