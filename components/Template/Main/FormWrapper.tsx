@@ -3,7 +3,7 @@ import Category from "~/components/Module/Main/Category";
 import AccidentHistory from "~/components/Module/Main/AccidentHistory";
 import RepairHistory from "~/components/Module/Main/RepairHistory";
 import ForeignCarCheck from "~/components/Module/Main/ForeignCarCheck";
-import MadeBtnWrapper from "~/components/Module/Main/MadeBtnWrapper";
+import MadeBtnWrapper from "~/components/Template/Main/MadeBtnWrapper";
 import CarPhotos from "~/components/Module/Main/CarPhotos";
 import PriceInput from "~/components/Module/Main/PriceInput";
 import styled from "styled-components";
